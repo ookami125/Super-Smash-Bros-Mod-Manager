@@ -1,0 +1,1419 @@
+Mod.cpp
+/app/source/Mod.cpp: In function 'void addSharedFiles(json&, json, std::string, std::string, std::string)':
+/app/source/Mod.cpp:345:9: error: expected ',' or ';' before 'if'
+  345 |         if(file_path.find("0x") == 0)
+      |         ^~
+/app/source/Mod.cpp:358:33: error: no match for 'operator!=' (operand types are 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} and 'const size_type' {aka 'const long unsigned int'})
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |            ~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~~~~~~~~~
+      |                     |                           |
+      |                     |                           const size_type {aka const long unsigned int}
+      |                     nlohmann::json_abi_v3_11_2::basic_json<>::iterator {aka nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >}
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:13295:10: note: candidate: 'template<class IterImpl, typename std::enable_if<(std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> > >::value || std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<const nlohmann::json_abi_v3_11_2::basic_json<> > >::value), std::nullptr_t>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::detail::iter_impl<BasicJsonType>::operator!=(const IterImpl&) const [with IterImpl = IterImpl; typename std::enable_if<(std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<BasicJsonType> >::value || std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<typename std::conditional<std::is_const<_Tp>::value, typename std::remove_const<_Tp>::type, const BasicJsonType>::type> >::value), std::nullptr_t>::type <anonymous> = <anonymous>; BasicJsonType = nlohmann::json_abi_v3_11_2::basic_json<>]'
+13295 |     bool operator!=(const IterImpl& other) const
+      |          ^~~~~~~~
+/app/source/json.hpp:13295:10: note:   template argument deduction/substitution failed:
+/app/source/json.hpp:13294:170: error: no type named 'type' in 'struct std::enable_if<false, std::nullptr_t>'
+13294 |     template < typename IterImpl, detail::enable_if_t < (std::is_same<IterImpl, iter_impl>::value || std::is_same<IterImpl, other_iter_impl>::value), std::nullptr_t > = nullptr >
+      |                                                                                                                                                                          ^~~~~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14675:13: note: candidate: 'template<class RefStringTypeLhs, class RefStringTypeRhs> bool nlohmann::json_abi_v3_11_2::operator!=(const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&, const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeRhs>&)'
+14675 | inline bool operator!=(const json_pointer<RefStringTypeLhs>& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14675:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14684:13: note: candidate: 'template<class RefStringTypeLhs, class StringType> bool nlohmann::json_abi_v3_11_2::operator!=(const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&, const StringType&)'
+14684 | inline bool operator!=(const json_pointer<RefStringTypeLhs>& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14684:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14693:13: note: candidate: 'template<class RefStringTypeRhs, class StringType> bool nlohmann::json_abi_v3_11_2::operator!=(const StringType&, const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&)'
+14693 | inline bool operator!=(const StringType& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14693:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:23061:17: note: candidate: 'template<class ScalarType, typename std::enable_if<std::is_scalar<_Tp>::value, int>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::operator!=(ScalarType, nlohmann::json_abi_v3_11_2::basic_json<>::const_reference)'
+23061 |     friend bool operator!=(ScalarType lhs, const_reference rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23061:17: note:   template argument deduction/substitution failed:
+/app/source/json.hpp:23060:66: error: no type named 'type' in 'struct std::enable_if<false, int>'
+23060 |                  std::is_scalar<ScalarType>::value, int>::type = 0>
+      |                                                                  ^
+/app/source/json.hpp:23052:17: note: candidate: 'template<class ScalarType, typename std::enable_if<std::is_scalar<_Tp>::value, int>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::operator!=(nlohmann::json_abi_v3_11_2::basic_json<>::const_reference, ScalarType)'
+23052 |     friend bool operator!=(const_reference lhs, ScalarType rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23052:17: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:21: note:   cannot convert 'nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::find(KeyType&&) [with KeyType = const char (&)[8]; typename std::enable_if<typename std::conditional<(typename std::conditional<(((nlohmann::json_abi_v3_11_2::detail::is_comparable<typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_comparator_t, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_t::key_type, KeyType, void>::value && (!(true && std::is_same<typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_t::key_type>::value))) && ((! true) || typename nlohmann::json_abi_v3_11_2::detail::detector<nlohmann::json_abi_v3_11_2::detail::nonesuch, void, nlohmann::json_abi_v3_11_2::detail::detect_is_transparent, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_comparator_t>::value_t::value)) && (! nlohmann::json_abi_v3_11_2::detail::is_specialization_of<nlohmann::json_abi_v3_11_2::json_pointer, typename std::remove_cv<typename std::remove_reference<typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type>::type>::type>::value)), std::integral_constant<bool, true>, std::integral_constant<bool, false> >::type::value && (! nlohmann::json_abi_v3_11_2::detail::is_json_iterator_of<nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>, typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type>::value)), std::integral_constant<bool, true>, std::integral_constant<bool, false> >::type::value, int>::type <anonymous> = 0; ObjectType = std::map; ArrayType = std::vector; StringType = std::__cxx11::basic_string<char>; BooleanType = bool; NumberIntegerType = long int; NumberUnsignedType = long unsigned int; NumberFloatType = double; AllocatorType = std::allocator; JSONSerializer = nlohmann::json_abi_v3_11_2::adl_serializer; BinaryType = std::vector<unsigned char>; CustomBaseClass = void; nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::iterator = nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >]("motion/")' (type 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'}) to type 'nlohmann::json_abi_v3_11_2::basic_json<>::const_reference' {aka 'const nlohmann::json_abi_v3_11_2::basic_json<>&'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |            ~~~~~~~~~^~~~~~~~~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:23039:17: note: candidate: 'bool nlohmann::json_abi_v3_11_2::operator!=(nlohmann::json_abi_v3_11_2::basic_json<>::const_reference, nlohmann::json_abi_v3_11_2::basic_json<>::const_reference)'
+23039 |     friend bool operator!=(const_reference lhs, const_reference rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23039:44: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'nlohmann::json_abi_v3_11_2::basic_json<>::const_reference' {aka 'const nlohmann::json_abi_v3_11_2::basic_json<>&'}
+23039 |     friend bool operator!=(const_reference lhs, const_reference rhs) noexcept
+      |                            ~~~~~~~~~~~~~~~~^~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/utility:70,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:60,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_pair.h:496:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  496 |     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_pair.h:496:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::pair<_T1, _T2>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:372:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  372 |     operator!=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:372:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::reverse_iterator<_Iterator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:410:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  410 |     operator!=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:410:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::reverse_iterator<_Iterator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1444:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1444 |     operator!=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1444:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::move_iterator<_IteratorL>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1501:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1501 |     operator!=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1501:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::move_iterator<_IteratorL>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:54,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/array:278:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> bool std::operator!=(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  278 |     operator!=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/array:278:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::array<_Tp, _Nm>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:54,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:1448:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1448 |     operator!=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:1448:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::tuple<_Tps ...>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:59,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:699:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator!=(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)'
+  699 |     operator!=(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:699:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::function<_Res(_ArgTypes ...)>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:59,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:705:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator!=(std::nullptr_t, const std::function<_Res(_ArgTypes ...)>&)'
+  705 |     operator!=(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:705:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::function<_Res(_ArgTypes ...)>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:213:5: note: candidate: 'template<class _T1, class _T2> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_T2>&)'
+  213 |     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:213:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::allocator<_Tp1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:994:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() != declval<_Up>()))> std::operator!=(const std::optional<_Tp>&, const std::optional<_Up>&)'
+  994 |     operator!=(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:994:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1061:5: note: candidate: 'template<class _Tp> constexpr bool std::operator!=(const std::optional<_Tp>&, std::nullopt_t)'
+ 1061 |     operator!=(const optional<_Tp>& __lhs, nullopt_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1061:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1066:5: note: candidate: 'template<class _Tp> constexpr bool std::operator!=(std::nullopt_t, const std::optional<_Tp>&)'
+ 1066 |     operator!=(nullopt_t, const optional<_Tp>& __rhs) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1066:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::optional<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1125:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() != declval<_Up>()))> std::operator!=(const std::optional<_Tp>&, const _Up&)'
+ 1125 |     operator!=(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1125:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1131:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Up>() != declval<_Tp>()))> std::operator!=(const _Up&, const std::optional<_Tp>&)'
+ 1131 |     operator!=(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1131:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::optional<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:47,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2097:5: note: candidate: 'template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)'
+ 2097 |     operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2097:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:47,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2111:5: note: candidate: 'template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)'
+ 2111 |     operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2111:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/vector:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:62,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_vector.h:1937:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)'
+ 1937 |     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_vector.h:1937:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::vector<_Tp, _Alloc>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/char_traits.h:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:40,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/postypes.h:227:5: note: candidate: 'template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)'
+  227 |     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/postypes.h:227:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::fpos<_StateT>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:525:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  525 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:525:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:531:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  531 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:531:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:538:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  538 |     operator!=(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:538:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'long unsigned int'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6229:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6229 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6229:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6242:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6242 |     operator!=(const _CharT* __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6242:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const _CharT*' and 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6254:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6254 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6254:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/set:61,
+                 from /app/source/Mod.h:2,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_set.h:1030:5: note: candidate: 'template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)'
+ 1030 |     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_set.h:1030:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::set<_Key, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/set:62,
+                 from /app/source/Mod.h:2,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multiset.h:1016:5: note: candidate: 'template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)'
+ 1016 |     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multiset.h:1016:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::multiset<_Key, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/ios_base.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/streambuf:41,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:35,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/iterator:66,
+                 from /app/source/json.hpp:28,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:398:3: note: candidate: 'bool std::operator!=(const std::error_code&, const std::error_code&)'
+  398 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:398:32: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_code&'
+  398 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:404:3: note: candidate: 'bool std::operator!=(const std::error_code&, const std::error_condition&)'
+  404 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:404:32: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_code&'
+  404 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:410:3: note: candidate: 'bool std::operator!=(const std::error_condition&, const std::error_code&)'
+  410 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:410:37: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_condition&'
+  410 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:415:3: note: candidate: 'bool std::operator!=(const std::error_condition&, const std::error_condition&)'
+  415 |   operator!=(const error_condition& __lhs,
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:415:37: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_condition&'
+  415 |   operator!=(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/iterator:66,
+                 from /app/source/json.hpp:28,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:233:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)'
+  233 |     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:233:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:774:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  774 |     operator!=(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:774:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:781:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  781 |     operator!=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:781:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:787:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator!=(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  787 |     operator!=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:787:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1470:5: note: candidate: 'template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)'
+ 1470 |     operator!=(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1470:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__shared_ptr<_Tp1, _Lp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1476:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)'
+ 1476 |     operator!=(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1476:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1481:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)'
+ 1481 |     operator!=(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1481:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::__shared_ptr<_Tp, _Lp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:469:5: note: candidate: 'template<class _Tp, class _Up> bool std::operator!=(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)'
+  469 |     operator!=(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:469:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::shared_ptr<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:475:5: note: candidate: 'template<class _Tp> bool std::operator!=(const std::shared_ptr<_Tp>&, std::nullptr_t)'
+  475 |     operator!=(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:475:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::shared_ptr<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:481:5: note: candidate: 'template<class _Tp> bool std::operator!=(std::nullptr_t, const std::shared_ptr<_Tp>&)'
+  481 |     operator!=(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:481:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/forward_list:38,
+                 from /app/source/json.hpp:162,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/forward_list.h:1476:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator!=(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)'
+ 1476 |     operator!=(const forward_list<_Tp, _Alloc>& __lx,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/forward_list.h:1476:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::forward_list<_Tp, _Alloc>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/map:61,
+                 from /app/source/json.hpp:164,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_map.h:1508:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)'
+ 1508 |     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_map.h:1508:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::map<_Key, _Tp, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/map:62,
+                 from /app/source/json.hpp:164,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multimap.h:1173:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)'
+ 1173 |     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multimap.h:1173:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const std::valarray<_Tp>&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::valarray<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::valarray<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const std::valarray<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:7: note: candidate: 'bool std::operator!=(const std::allocator<char>&, const std::allocator<char>&)'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:18: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::allocator<char>&'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1080:5: note: candidate: 'template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)'
+ 1080 |     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1080:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1088:5: note: candidate: 'template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)'
+ 1088 |     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1088:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/aarch64-none-elf/pic/bits/c++allocator.h:33,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note: candidate: 'template<class _Up> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<char>&, const __gnu_cxx::new_allocator<_Tp>&)'
+  178 |  operator!=(const new_allocator&, const new_allocator<_Up>&)
+      |  ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:7: note: candidate: 'bool std::operator!=(const std::allocator<unsigned char>&, const std::allocator<unsigned char>&)'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:18: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::allocator<unsigned char>&'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/aarch64-none-elf/pic/bits/c++allocator.h:33,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note: candidate: 'template<class _Up> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<unsigned char>&, const __gnu_cxx::new_allocator<_Tp>&)'
+  178 |  operator!=(const new_allocator&, const new_allocator<_Up>&)
+      |  ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:49: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                 ^~~~
+/app/source/Mod.cpp:358:78: error: no match for 'operator!=' (operand types are 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} and 'const size_type' {aka 'const long unsigned int'})
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                         ~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~~~~~~~~~~
+      |                                                                  |                           |
+      |                                                                  |                           const size_type {aka const long unsigned int}
+      |                                                                  nlohmann::json_abi_v3_11_2::basic_json<>::iterator {aka nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >}
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:13295:10: note: candidate: 'template<class IterImpl, typename std::enable_if<(std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> > >::value || std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<const nlohmann::json_abi_v3_11_2::basic_json<> > >::value), std::nullptr_t>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::detail::iter_impl<BasicJsonType>::operator!=(const IterImpl&) const [with IterImpl = IterImpl; typename std::enable_if<(std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<BasicJsonType> >::value || std::is_same<IterImpl, nlohmann::json_abi_v3_11_2::detail::iter_impl<typename std::conditional<std::is_const<_Tp>::value, typename std::remove_const<_Tp>::type, const BasicJsonType>::type> >::value), std::nullptr_t>::type <anonymous> = <anonymous>; BasicJsonType = nlohmann::json_abi_v3_11_2::basic_json<>]'
+13295 |     bool operator!=(const IterImpl& other) const
+      |          ^~~~~~~~
+/app/source/json.hpp:13295:10: note:   template argument deduction/substitution failed:
+/app/source/json.hpp:13294:170: error: no type named 'type' in 'struct std::enable_if<false, std::nullptr_t>'
+13294 |     template < typename IterImpl, detail::enable_if_t < (std::is_same<IterImpl, iter_impl>::value || std::is_same<IterImpl, other_iter_impl>::value), std::nullptr_t > = nullptr >
+      |                                                                                                                                                                          ^~~~~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14675:13: note: candidate: 'template<class RefStringTypeLhs, class RefStringTypeRhs> bool nlohmann::json_abi_v3_11_2::operator!=(const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&, const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeRhs>&)'
+14675 | inline bool operator!=(const json_pointer<RefStringTypeLhs>& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14675:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14684:13: note: candidate: 'template<class RefStringTypeLhs, class StringType> bool nlohmann::json_abi_v3_11_2::operator!=(const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&, const StringType&)'
+14684 | inline bool operator!=(const json_pointer<RefStringTypeLhs>& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14684:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:14693:13: note: candidate: 'template<class RefStringTypeRhs, class StringType> bool nlohmann::json_abi_v3_11_2::operator!=(const StringType&, const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>&)'
+14693 | inline bool operator!=(const StringType& lhs,
+      |             ^~~~~~~~
+/app/source/json.hpp:14693:13: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const nlohmann::json_abi_v3_11_2::json_pointer<RefStringTypeLhs>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:23061:17: note: candidate: 'template<class ScalarType, typename std::enable_if<std::is_scalar<_Tp>::value, int>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::operator!=(ScalarType, nlohmann::json_abi_v3_11_2::basic_json<>::const_reference)'
+23061 |     friend bool operator!=(ScalarType lhs, const_reference rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23061:17: note:   template argument deduction/substitution failed:
+/app/source/json.hpp:23060:66: error: no type named 'type' in 'struct std::enable_if<false, int>'
+23060 |                  std::is_scalar<ScalarType>::value, int>::type = 0>
+      |                                                                  ^
+/app/source/json.hpp:23052:17: note: candidate: 'template<class ScalarType, typename std::enable_if<std::is_scalar<_Tp>::value, int>::type <anonymous> > bool nlohmann::json_abi_v3_11_2::operator!=(nlohmann::json_abi_v3_11_2::basic_json<>::const_reference, ScalarType)'
+23052 |     friend bool operator!=(const_reference lhs, ScalarType rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23052:17: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:66: note:   cannot convert 'nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::find(KeyType&&) [with KeyType = const char (&)[8]; typename std::enable_if<typename std::conditional<(typename std::conditional<(((nlohmann::json_abi_v3_11_2::detail::is_comparable<typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_comparator_t, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_t::key_type, KeyType, void>::value && (!(true && std::is_same<typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_t::key_type>::value))) && ((! true) || typename nlohmann::json_abi_v3_11_2::detail::detector<nlohmann::json_abi_v3_11_2::detail::nonesuch, void, nlohmann::json_abi_v3_11_2::detail::detect_is_transparent, typename nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::object_comparator_t>::value_t::value)) && (! nlohmann::json_abi_v3_11_2::detail::is_specialization_of<nlohmann::json_abi_v3_11_2::json_pointer, typename std::remove_cv<typename std::remove_reference<typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type>::type>::type>::value)), std::integral_constant<bool, true>, std::integral_constant<bool, false> >::type::value && (! nlohmann::json_abi_v3_11_2::detail::is_json_iterator_of<nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>, typename std::remove_cv<typename std::remove_reference<_Tuple>::type>::type>::value)), std::integral_constant<bool, true>, std::integral_constant<bool, false> >::type::value, int>::type <anonymous> = 0; ObjectType = std::map; ArrayType = std::vector; StringType = std::__cxx11::basic_string<char>; BooleanType = bool; NumberIntegerType = long int; NumberUnsignedType = long unsigned int; NumberFloatType = double; AllocatorType = std::allocator; JSONSerializer = nlohmann::json_abi_v3_11_2::adl_serializer; BinaryType = std::vector<unsigned char>; CustomBaseClass = void; nlohmann::json_abi_v3_11_2::basic_json<ObjectType, ArrayType, StringType, BooleanType, NumberIntegerType, NumberUnsignedType, NumberFloatType, AllocatorType, JSONSerializer, BinaryType, CustomBaseClass>::iterator = nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >]("camera/")' (type 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'}) to type 'nlohmann::json_abi_v3_11_2::basic_json<>::const_reference' {aka 'const nlohmann::json_abi_v3_11_2::basic_json<>&'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                         ~~~~~~~~~^~~~~~~~~~~
+In file included from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/app/source/json.hpp:23039:17: note: candidate: 'bool nlohmann::json_abi_v3_11_2::operator!=(nlohmann::json_abi_v3_11_2::basic_json<>::const_reference, nlohmann::json_abi_v3_11_2::basic_json<>::const_reference)'
+23039 |     friend bool operator!=(const_reference lhs, const_reference rhs) noexcept
+      |                 ^~~~~~~~
+/app/source/json.hpp:23039:44: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'nlohmann::json_abi_v3_11_2::basic_json<>::const_reference' {aka 'const nlohmann::json_abi_v3_11_2::basic_json<>&'}
+23039 |     friend bool operator!=(const_reference lhs, const_reference rhs) noexcept
+      |                            ~~~~~~~~~~~~~~~~^~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/utility:70,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:60,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_pair.h:496:5: note: candidate: 'template<class _T1, class _T2> constexpr bool std::operator!=(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)'
+  496 |     operator!=(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_pair.h:496:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::pair<_T1, _T2>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:372:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)'
+  372 |     operator!=(const reverse_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:372:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::reverse_iterator<_Iterator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:410:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)'
+  410 |     operator!=(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:410:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::reverse_iterator<_Iterator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1444:5: note: candidate: 'template<class _IteratorL, class _IteratorR> constexpr bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)'
+ 1444 |     operator!=(const move_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1444:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::move_iterator<_IteratorL>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1501:5: note: candidate: 'template<class _Iterator> constexpr bool std::operator!=(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)'
+ 1501 |     operator!=(const move_iterator<_Iterator>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1501:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::move_iterator<_IteratorL>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:54,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/array:278:5: note: candidate: 'template<class _Tp, long unsigned int _Nm> bool std::operator!=(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)'
+  278 |     operator!=(const array<_Tp, _Nm>& __one, const array<_Tp, _Nm>& __two)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/array:278:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::array<_Tp, _Nm>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:54,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:1448:5: note: candidate: 'template<class ... _TElements, class ... _UElements> constexpr bool std::operator!=(const std::tuple<_Tps ...>&, const std::tuple<_UTypes ...>&)'
+ 1448 |     operator!=(const tuple<_TElements...>& __t,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/tuple:1448:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::tuple<_Tps ...>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:59,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:699:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator!=(const std::function<_Res(_ArgTypes ...)>&, std::nullptr_t)'
+  699 |     operator!=(const function<_Res(_Args...)>& __f, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:699:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::function<_Res(_ArgTypes ...)>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:59,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:705:5: note: candidate: 'template<class _Res, class ... _Args> bool std::operator!=(std::nullptr_t, const std::function<_Res(_ArgTypes ...)>&)'
+  705 |     operator!=(nullptr_t, const function<_Res(_Args...)>& __f) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/std_function.h:705:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::function<_Res(_ArgTypes ...)>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:213:5: note: candidate: 'template<class _T1, class _T2> bool std::operator!=(const std::allocator<_Tp1>&, const std::allocator<_T2>&)'
+  213 |     operator!=(const allocator<_T1>&, const allocator<_T2>&)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:213:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::allocator<_Tp1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:994:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() != declval<_Up>()))> std::operator!=(const std::optional<_Tp>&, const std::optional<_Up>&)'
+  994 |     operator!=(const optional<_Tp>& __lhs, const optional<_Up>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:994:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1061:5: note: candidate: 'template<class _Tp> constexpr bool std::operator!=(const std::optional<_Tp>&, std::nullopt_t)'
+ 1061 |     operator!=(const optional<_Tp>& __lhs, nullopt_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1061:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1066:5: note: candidate: 'template<class _Tp> constexpr bool std::operator!=(std::nullopt_t, const std::optional<_Tp>&)'
+ 1066 |     operator!=(nullopt_t, const optional<_Tp>& __rhs) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1066:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::optional<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1125:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Tp>() != declval<_Up>()))> std::operator!=(const std::optional<_Tp>&, const _Up&)'
+ 1125 |     operator!=(const optional<_Tp>& __lhs, const _Up& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1125:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::optional<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/node_handle.h:39,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/hashtable.h:37,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1131:5: note: candidate: 'template<class _Tp, class _Up> constexpr std::__optional_relop_t<decltype ((declval<_Up>() != declval<_Tp>()))> std::operator!=(const _Up&, const std::optional<_Tp>&)'
+ 1131 |     operator!=(const _Up& __lhs, const optional<_Tp>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/optional:1131:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::optional<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:47,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2097:5: note: candidate: 'template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)'
+ 2097 |     operator!=(const unordered_map<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2097:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unordered_map<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:47,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2111:5: note: candidate: 'template<class _Key, class _Tp, class _Hash, class _Pred, class _Alloc> bool std::operator!=(const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&, const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>&)'
+ 2111 |     operator!=(const unordered_multimap<_Key, _Tp, _Hash, _Pred, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unordered_map.h:2111:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unordered_multimap<_Key1, _Tp1, _Hash1, _Pred1, _Alloc1>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/vector:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:62,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_vector.h:1937:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator!=(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)'
+ 1937 |     operator!=(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_vector.h:1937:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::vector<_Tp, _Alloc>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/char_traits.h:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:40,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/postypes.h:227:5: note: candidate: 'template<class _StateT> bool std::operator!=(const std::fpos<_StateT>&, const std::fpos<_StateT>&)'
+  227 |     operator!=(const fpos<_StateT>& __lhs, const fpos<_StateT>& __rhs)
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/postypes.h:227:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::fpos<_StateT>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:525:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::basic_string_view<_CharT, _Traits>, std::basic_string_view<_CharT, _Traits>)'
+  525 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:525:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:531:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::basic_string_view<_CharT, _Traits>, std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >)'
+  531 |     operator!=(basic_string_view<_CharT, _Traits> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:531:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >' is not derived from 'std::basic_string_view<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:48,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:538:5: note: candidate: 'template<class _CharT, class _Traits> constexpr bool std::operator!=(std::__type_identity_t<std::basic_string_view<_CharT, _Traits> >, std::basic_string_view<_CharT, _Traits>)'
+  538 |     operator!=(__type_identity_t<basic_string_view<_CharT, _Traits>> __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string_view:538:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'std::basic_string_view<_CharT, _Traits>' and 'long unsigned int'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6229:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6229 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6229:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6242:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)'
+ 6242 |     operator!=(const _CharT* __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6242:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const _CharT*' and 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/string:55,
+                 from /app/source/Mod.h:1,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6254:5: note: candidate: 'template<class _CharT, class _Traits, class _Alloc> bool std::operator!=(const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&, const _CharT*)'
+ 6254 |     operator!=(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/basic_string.h:6254:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/set:61,
+                 from /app/source/Mod.h:2,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_set.h:1030:5: note: candidate: 'template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::set<_Key, _Compare, _Allocator>&, const std::set<_Key, _Compare, _Allocator>&)'
+ 1030 |     operator!=(const set<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_set.h:1030:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::set<_Key, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/set:62,
+                 from /app/source/Mod.h:2,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multiset.h:1016:5: note: candidate: 'template<class _Key, class _Compare, class _Alloc> bool std::operator!=(const std::multiset<_Key, _Compare, _Allocator>&, const std::multiset<_Key, _Compare, _Allocator>&)'
+ 1016 |     operator!=(const multiset<_Key, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multiset.h:1016:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::multiset<_Key, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/ios_base.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/streambuf:41,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:35,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/iterator:66,
+                 from /app/source/json.hpp:28,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:398:3: note: candidate: 'bool std::operator!=(const std::error_code&, const std::error_code&)'
+  398 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:398:32: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_code&'
+  398 |   operator!=(const error_code& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:404:3: note: candidate: 'bool std::operator!=(const std::error_code&, const std::error_condition&)'
+  404 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:404:32: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_code&'
+  404 |   operator!=(const error_code& __lhs, const error_condition& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:410:3: note: candidate: 'bool std::operator!=(const std::error_condition&, const std::error_code&)'
+  410 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:410:37: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_condition&'
+  410 |   operator!=(const error_condition& __lhs, const error_code& __rhs) noexcept
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:415:3: note: candidate: 'bool std::operator!=(const std::error_condition&, const std::error_condition&)'
+  415 |   operator!=(const error_condition& __lhs,
+      |   ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/system_error:415:37: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::error_condition&'
+  415 |   operator!=(const error_condition& __lhs,
+      |              ~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/iterator:66,
+                 from /app/source/json.hpp:28,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:233:5: note: candidate: 'template<class _CharT, class _Traits> bool std::operator!=(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)'
+  233 |     operator!=(const istreambuf_iterator<_CharT, _Traits>& __a,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/streambuf_iterator.h:233:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::istreambuf_iterator<_CharT, _Traits>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:774:5: note: candidate: 'template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)'
+  774 |     operator!=(const unique_ptr<_Tp, _Dp>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:774:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:781:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator!=(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)'
+  781 |     operator!=(const unique_ptr<_Tp, _Dp>& __x, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:781:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::unique_ptr<_Tp, _Dp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:83,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:787:5: note: candidate: 'template<class _Tp, class _Dp> bool std::operator!=(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)'
+  787 |     operator!=(nullptr_t, const unique_ptr<_Tp, _Dp>& __x) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/unique_ptr.h:787:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::unique_ptr<_Tp, _Dp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1470:5: note: candidate: 'template<class _Tp1, class _Tp2, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)'
+ 1470 |     operator!=(const __shared_ptr<_Tp1, _Lp>& __a,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1470:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__shared_ptr<_Tp1, _Lp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1476:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)'
+ 1476 |     operator!=(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1476:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::__shared_ptr<_Tp, _Lp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:52,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1481:5: note: candidate: 'template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator!=(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)'
+ 1481 |     operator!=(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr_base.h:1481:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::__shared_ptr<_Tp, _Lp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:469:5: note: candidate: 'template<class _Tp, class _Up> bool std::operator!=(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Tp>&)'
+  469 |     operator!=(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:469:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::shared_ptr<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:475:5: note: candidate: 'template<class _Tp> bool std::operator!=(const std::shared_ptr<_Tp>&, std::nullptr_t)'
+  475 |     operator!=(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:475:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::shared_ptr<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/memory:84,
+                 from /app/source/json.hpp:29,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:481:5: note: candidate: 'template<class _Tp> bool std::operator!=(std::nullptr_t, const std::shared_ptr<_Tp>&)'
+  481 |     operator!=(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/shared_ptr.h:481:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::shared_ptr<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/forward_list:38,
+                 from /app/source/json.hpp:162,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/forward_list.h:1476:5: note: candidate: 'template<class _Tp, class _Alloc> bool std::operator!=(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)'
+ 1476 |     operator!=(const forward_list<_Tp, _Alloc>& __lx,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/forward_list.h:1476:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::forward_list<_Tp, _Alloc>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/map:61,
+                 from /app/source/json.hpp:164,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_map.h:1508:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::map<_Key, _Tp, _Compare, _Allocator>&, const std::map<_Key, _Tp, _Compare, _Allocator>&)'
+ 1508 |     operator!=(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_map.h:1508:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::map<_Key, _Tp, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/map:62,
+                 from /app/source/json.hpp:164,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multimap.h:1173:5: note: candidate: 'template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator!=(const std::multimap<_Key, _Tp, _Compare, _Allocator>&, const std::multimap<_Key, _Tp, _Compare, _Allocator>&)'
+ 1173 |     operator!=(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_multimap.h:1173:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::multimap<_Key, _Tp, _Compare, _Allocator>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom1, class _Dom2> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::_Expr<_Dom1, typename _Dom1::value_type>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:603,
+                 from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note: candidate: 'template<class _Dom> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__not_equal_to, typename _Dom1::value_type>::result_type> std::operator!=(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)'
+  418 |     _DEFINE_EXPR_BINARY_OPERATOR(!=, __not_equal_to)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/valarray_after.h:418:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::_Expr<_Dom1, typename _Dom1::value_type>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const std::valarray<_Tp>&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::valarray<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const std::valarray<_Tp>&, const typename std::valarray<_Tp>::value_type&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const std::valarray<_Tp>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /app/source/json.hpp:170,
+                 from /app/source/Mod.h:4,
+                 from /app/source/Mod.cpp:2:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note: candidate: 'template<class _Tp> std::_Expr<std::__detail::_BinClos<std::__not_equal_to, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__not_equal_to, _Tp>::result_type> std::operator!=(const typename std::valarray<_Tp>::value_type&, const std::valarray<_Tp>&)'
+ 1198 | _DEFINE_BINARY_OPERATOR(!=, __not_equal_to)
+      | ^~~~~~~~~~~~~~~~~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/valarray:1198:1: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const std::valarray<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:7: note: candidate: 'bool std::operator!=(const std::allocator<char>&, const std::allocator<char>&)'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:18: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::allocator<char>&'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1080:5: note: candidate: 'template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)'
+ 1080 |     operator!=(const __normal_iterator<_IteratorL, _Container>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1080:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const __gnu_cxx::__normal_iterator<_IteratorL, _Container>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_algobase.h:67,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:61,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1088:5: note: candidate: 'template<class _Iterator, class _Container> bool __gnu_cxx::operator!=(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)'
+ 1088 |     operator!=(const __normal_iterator<_Iterator, _Container>& __lhs,
+      |     ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/stl_iterator.h:1088:5: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} is not derived from 'const __gnu_cxx::__normal_iterator<_Iterator, _Container>'
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/aarch64-none-elf/pic/bits/c++allocator.h:33,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note: candidate: 'template<class _Up> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<char>&, const __gnu_cxx::new_allocator<_Tp>&)'
+  178 |  operator!=(const new_allocator&, const new_allocator<_Up>&)
+      |  ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:7: note: candidate: 'bool std::operator!=(const std::allocator<unsigned char>&, const std::allocator<unsigned char>&)'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |       ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:197:18: note:   no known conversion for argument 1 from 'nlohmann::json_abi_v3_11_2::basic_json<>::iterator' {aka 'nlohmann::json_abi_v3_11_2::detail::iter_impl<nlohmann::json_abi_v3_11_2::basic_json<> >'} to 'const std::allocator<unsigned char>&'
+  197 |       operator!=(const allocator&, const allocator&) _GLIBCXX_NOTHROW
+      |                  ^~~~~~~~~~~~~~~~
+In file included from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/aarch64-none-elf/pic/bits/c++allocator.h:33,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/bits/allocator.h:46,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/unordered_map:40,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/functional:61,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/pstl/glue_algorithm_defs.h:13,
+                 from /opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/algorithm:74,
+                 from /app/source/Mod.cpp:1:
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note: candidate: 'template<class _Up> bool __gnu_cxx::operator!=(const __gnu_cxx::new_allocator<unsigned char>&, const __gnu_cxx::new_allocator<_Tp>&)'
+  178 |  operator!=(const new_allocator&, const new_allocator<_Up>&)
+      |  ^~~~~~~~
+/opt/devkitpro/devkitA64/aarch64-none-elf/include/c++/10.2.0/ext/new_allocator.h:178:2: note:   template argument deduction/substitution failed:
+/app/source/Mod.cpp:358:94: note:   mismatched types 'const __gnu_cxx::new_allocator<_Tp>' and 'const size_type' {aka 'const long unsigned int'}
+  358 |         if(file.find("motion/") != std::string::npos || file.find("camera/") != std::string::npos)
+      |                                                                                              ^~~~
+/opt/devkitpro/devkitA64/base_rules:13: recipe for target 'Mod.o' failed
+make[1]: *** [Mod.o] Error 1
+Makefile:159: recipe for target 'build' failed
+make: *** [build] Error 2
